@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="table">
+        <form class="FormaAddingNotice">
+             <p class="row"> Phone: +38<input type="text" id = 'phone' name="phone" class="colum"> </p>
+             <p class="row"> Full Name: <input type="text" id = 'name' name="name" class="colum"> </p>
+             <p class="row"> Email: <input type="email" id = 'email' name="email" class="colum"> </p>
+             <p class="row"> Address: <input type="text" id = 'address' name="text" class="colum"> </p>
+             <button class="button">Add new record (or Save)</button>
+             <div class = 'errField'></div>
+        </form>
+        <table class = "AddressBook">
+            <tr class="mainRow">
+                <td class="colum">Phone</td>
+                <td class="colum name">Full Name </br><i>(sort by name)</i></td>
+                <td class="colum">Email</td>
+                <td class="colum">Addres</td>
+                <td class="colum">Operating</td>
+            </tr>
+        </table>
+
+        <form class="FormaSF">
+             <p>Search by name</p>
+             <p class="row"> Enter name: <input type="text"  name="SearchField" class="searchField"> </p>
+             <button class="button">ok</button>
+             <div class = 'outputRow'></div>
+        </form>
+    </div>
+
+    <script src = 'app.js'></script>
+</body>
+</html>

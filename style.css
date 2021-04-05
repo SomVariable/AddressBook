@@ -1,0 +1,86 @@
+
+.table{
+    font-size: 18px;
+    position: relative;
+}
+
+.AddressBook{
+    border-collapse:collapse;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.AddressBook>tbody>.mainRow{
+    background-color: lightgray;
+    text-align: center;
+}
+
+.AddressBook>tbody>.mainRow>.name:hover{
+    border:2px solid black;
+    border-radius: 4px;
+    box-shadow: 1px;
+}
+
+.AddressBook>tbody>.mainRow>.name>i{
+    font-size: 14px;
+}
+
+.AddressBook>tbody>.mainRow>.colum, .AddressBook>tbody>.row>.colum{
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+
+
+.AddressBook>tbody>.row>.colum>button{
+    border: none;
+    border-bottom: 0.2px solid black;
+    outline:none;
+    background-color: white;
+}
+
+.FormaAddingNotice{
+    width: 300px;
+    position: absolute;
+    margin:10px 0 100px 0;
+    top:10px;
+    right: 15px; 
+}
+
+.FormaAddingNotice>.row{
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.FormaAddingNotice>.button{
+    width: 300px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    outline:none;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.FormaAddingNotice>.row>.colum{
+    border:none;
+    outline:none;
+}
+
+.FormaAddingNotice>.errField>p{
+    font-size: 12px;
+    margin-bottom:1px;
+    margin-top:1px;
+    color:red;
+}
+
+.FormaSF{
+    position: absolute;
+    top:300px;
+    right: 15px;
+}
+
