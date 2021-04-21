@@ -9,8 +9,7 @@ let AVAILABLEPRODUCT = [],
     PRODUCTSINBASKET = [],
     CountersProducts = [],
     PRODUCTPRICE     = [],
-    TOTAL            = SHOPINNER.querySelector('.total').querySelector('.total__price'),
-    test = [];
+    TOTAL            = SHOPINNER.querySelector('.total').querySelector('.total__price');
 
 
 function sendRequest(method, url) {
@@ -116,16 +115,21 @@ window.addEventListener('storage', e=>{
     }
   }))){
     currLocStorObj = JSON.parse(localStorage.getItem(e.key));
-    changeProduct(currLocStorObj)
+
+    changeProduct(currLocStorObj);
   }
 })
 function changeProduct(jsonObj){
-  let items = ITEMS.querySelectorAll('.item');
-  console.log(jsonObj.idInBasket)
-  console.log(items[jsonObj.idInBasket]);
-  items[jsonObj.idInBasket].querySelector('.price').textContent = jsonObj.price;
-  items[jsonObj.idInBasket].querySelector('.number').textContent = jsonObj.number;
-  deleteProduct(jsonObj, jsonObj.idInList, jsonObj.name);
+   let items = ITEMS.querySelectorAll('.item');
+    //console.log(jsonObj.idInBasket);
+
+   //items[jsonObj.idInBasket].querySelector('.price').textContent = jsonObj.price;
+   //items[jsonObj.idInBasket].querySelector('.number').textContent = jsonObj.number;
+  // console.log(CountersProducts[jsonObj.idInList]);
+  //  if(CountersProducts[jsonObj.idInList] === 0){
+  //    console.log("+");
+  //    deleteProduct(items[jsonObj.idInBasket], jsonObj.idInList, jsonObj.name);
+  //  }
 }
 function addProductTobasket(target, product, price, id){
   CountersProducts[id]++;
@@ -174,7 +178,7 @@ function decProduct(idInBasket, idInList, btn, div){
 }
 function deleteProduct(target, idInList, name){
   PRODUCTSINBASKET[idInList] = false;
-  localStorage.removeItem(name);
+  localStorage.getItem(name)?localStorage.removeItem(name):null;
   target.remove();
 }
 
