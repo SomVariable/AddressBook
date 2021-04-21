@@ -1,0 +1,107 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    overflow-x: hidden;
+    min-width: 375px;
+    background-color: #fff;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0px 10px 0px;
+    display:block;
+    position: relative;
+}
+.shop .shop__inner{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+}
+.shop .shop__inner .shop__item .list_ul{
+    padding: 0;
+    grid-column-end: span 6;
+    list-style: none;
+    margin: 0 auto;
+}
+.shop .shop__inner .shop__item .list_ul li{
+    padding:0 0 30px 0;
+    border-bottom: 1px solid black;
+}
+.shop .shop__inner .shop__item .list_ul li .active{
+    cursor: pointer;
+    background-color: lightskyblue;
+}
+.shop .shop__inner .shop__item .list_ul li .disablet{
+    background-color: grey;
+}
+.shop .shop__inner .shop__item{
+    grid-column-end: span 6;
+    grid-row-end: span 4;
+}
+
+.basket{
+    background-color: ghostwhite;
+    min-height: 100px;
+    width:250px; 
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.basket h2{
+    text-align: center;    
+    margin:0;
+}
+
+.basket .total{
+    display: flex;
+}
+
+.basket .total p{
+    align-self: flex-end;
+}
+
+.basket .item{
+    padding: 0 10px 10px 10px;
+    margin: 0;
+    min-height: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+.basket .items .name{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.basket .items .item .price{
+    grid-column-start: 10; 
+    grid-column-end: span 2;
+}
+
+.basket .items .btn{
+    text-align: center;
+    width:20px;
+    height:20px;
+    padding: 0;
+    grid-row-start: 2;
+    border-color:lightskyblue;
+    color: lightskyblue;
+}
+
+.basket .items .number{
+    grid-row-start: 2;
+    
+}
+
+.basket .items .add{
+    margin-right: 5px;
+}
+
+
